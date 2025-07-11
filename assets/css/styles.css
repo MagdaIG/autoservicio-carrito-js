@@ -1,0 +1,243 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa 0%, #f3e5f5 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Botones principales */
+button, .btn {
+  border-radius: 25px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+button:active, .btn:active {
+  transform: translateY(0);
+}
+
+#pantalla-inicial .card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 20px;
+}
+
+#pantalla-inicial .form-label {
+  color: #4a148c;
+}
+
+#startBtn {
+  background-color: #267027;
+  border: none;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.card-inicio {
+  background: linear-gradient(to bottom right, #e1bee7, #b2ebf2);
+  border: none;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  margin-top: 40px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+#pantalla-inicial h1 {
+  color: #4a148c;
+  font-weight: 600;
+}
+
+/* Cards de productos y carrito */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  padding: 1.2rem;
+  font-weight: 600;
+}
+
+/* Productos */
+.product-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Carrito */
+.cart-item {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cart-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Botones de acción */
+.agregar-carrito-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% !important;
+}
+
+.botones-acciones {
+  min-width: 70px;
+}
+
+.disminuir-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eliminar-carrito-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc3545;
+  transition: all 0.2s ease;
+}
+
+.eliminar-carrito-btn:hover {
+  transform: scale(1.2);
+}
+
+.eliminar-carrito-btn:active {
+  transform: scale(0.95);
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 25px;
+  padding: 12px 20px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(74, 20, 140, 0.25);
+  border-color: #4a148c;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+}
+
+.modal-header {
+  background-color: #4a148c;
+  color: white;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#contenido-dinamico > div {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-body {
+    max-height: none !important;
+  }
+
+  #contenido-dinamico .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.card-registro-cliente {
+  background: linear-gradient(135deg, #e1bee7, #b2ebf2);
+  padding: 2.5rem 2rem;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* footer Sticky :( */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#contenido-dinamico {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.footer-magda {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+  color: #4a148c;
+  font-weight: 500;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .footer-magda {
+    font-size: 0.85rem;
+    padding: 16px;
+  }
+}
