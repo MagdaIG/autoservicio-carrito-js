@@ -1,0 +1,18 @@
+# Evitar configuración del editor
+.idea/
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp
+*~
+
+# Evitar node_modules si usas Node más adelante
+node_modules/
+
+# Archivos ocultos o backups
+.y
